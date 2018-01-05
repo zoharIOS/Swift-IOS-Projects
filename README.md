@@ -10,7 +10,7 @@ https://github.com/zoharIOS/HackerU/tree/master/AlertExercise
             //get data from plist
         let path = Bundle.main.path(forResource: "users", ofType: "plist")!
         myUsers = NSDictionary(contentsOfFile: path) as! Dictionary
-        
+---        
 ### User defaults
             private let prefs = UserDefaults.standard
             user = prefs.string(forKey: ViewController.LOG_USER)
