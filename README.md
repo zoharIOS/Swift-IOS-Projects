@@ -15,6 +15,7 @@ https://github.com/zoharIOS/HackerU/tree/master/AlertExercise
             private let prefs = UserDefaults.standard
             user = prefs.string(forKey: ViewController.LOG_USER)
             prefs.set(name, forKey: ViewController.LOG_USER)
+---
 ### UIALertcontrol
 ```swift
         let alert = UIAlertController(title: "Login", message: nil, preferredStyle: .alert)
@@ -50,9 +51,10 @@ https://github.com/zoharIOS/HackerU/tree/master/AlertExercise
       //show it
       present(alert, animated: true, completion: nil)
 ```
+# more exmples of the same type of alert dialog builder:
 https://github.com/zoharIOS/HackerU/tree/master/MyAlerts
-### UIAlertControl
 
+---
 https://github.com/zoharIOS/HackerU/tree/master/MyCustomViews
 ### custom Views :
 # make a class and then set the button in storyboard with identity inspector to this class
@@ -72,6 +74,7 @@ class MyButton: UIButton {
  section: UIView! 
  section.layer.borderWidth = 2
 ```
+---
 https://github.com/zoharIOS/HackerU/blob/master/MyDynViews/ViewController.swift
 ## dynamic views
 # make a view using UIView construcot 
@@ -91,7 +94,7 @@ https://github.com/zoharIOS/HackerU/blob/master/MyDynViews/ViewController.swift
 # after creating the desired view and adding properties to the look and feel you should add it to a parent groupView, for exmple to the super view:
     view.addSubview(squareView)
 # The link aboth shows exmples also for UIButton()
-
+---
 # build dynamic labels on below of each other in a loop 
     let movies = ["John wick", "John wick Part 2", "Jurassic park", "Freddy Krueger"]
     var y: CGFloat = 20 //reuse y position, start from status bar
@@ -109,6 +112,7 @@ https://github.com/zoharIOS/HackerU/blob/master/MyDynViews/ViewController.swift
        if v is UILabel { //each one that is label
           v.removeFromSuperview() //remove
         }
+---        
 https://github.com/zoharIOS/HackerU/blob/master/MyGradi/ViewController.swift
 ## Gradient
     //in iOS gradient is a sort of layer
@@ -125,7 +129,7 @@ https://github.com/zoharIOS/HackerU/blob/master/MyGradi/ViewController.swift
 
     //add gradient layer to existing list of layers of that view
     view.layer.insertSublayer(layer, at: 0)
-    
+---    
 # centering before adding to the super view
     //directions
     let l = layer //(aboth example)
