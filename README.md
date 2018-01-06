@@ -29,7 +29,7 @@
             tf.isSecureTextEntry = true
         })
 
-        func okHandler(action: UIAlertAction) {
+        func __okHandler__(action: UIAlertAction) {
         let name = alert.textFields![0].text!
         let pass = alert.textFields![1].text!
         if pass == myUsers[name] { //if password & user are ok
