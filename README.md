@@ -7,7 +7,7 @@
 
 [AlertExercise](https://github.com/zoharIOS/HackerU/tree/master/AlertExercise)
 ### Plist :
-            //get data from plist
+            //get <b>a from <b>st
         let path = Bundle.main.path(forResource: "users", ofType: "plist")!
         myUsers = NSDictionary(contentsOfFile: path) as! Dictionary
 ---        
@@ -52,10 +52,10 @@
       present(alert, animated: true, completion: nil)
 ```
 # more exmples of the same type of alert dialog builder:
-https://github.com/zoharIOS/HackerU/tree/master/MyAlerts
+[MyAlerts](https://github.com/zoharIOS/HackerU/tree/master/MyAlerts)
 
 ---
-https://github.com/zoharIOS/HackerU/tree/master/MyCustomViews
+[MyCustomViews](https://github.com/zoharIOS/HackerU/tree/master/MyCustomViews)
 ### custom Views :
 # make a class and then set the button in storyboard with identity inspector to this class
 ```swift
@@ -75,9 +75,9 @@ class MyButton: UIButton {
  section.layer.borderWidth = 2
 ```
 ---
-https://github.com/zoharIOS/HackerU/blob/master/MyDynViews/ViewController.swift
+[MyDynViews](https://github.com/zoharIOS/HackerU/blob/master/MyDynViews/ViewController.swift)
 ## dynamic views
-# make a view using UIView construcot 
+# make a view using UIView constructor 
     //origin & size
     let origin = CGPoint(x: 40, y: 20)
     let size = CGSize(width: 50, height: 50)        
@@ -113,7 +113,7 @@ https://github.com/zoharIOS/HackerU/blob/master/MyDynViews/ViewController.swift
           v.removeFromSuperview() //remove
         }
 ---        
-https://github.com/zoharIOS/HackerU/blob/master/MyGradi/ViewController.swift
+[MyGradi](https://github.com/zoharIOS/HackerU/blob/master/MyGradi/ViewController.swift)
 ## Gradient
     //in iOS gradient is a sort of layer
     let layer = CAGradientLayer()
