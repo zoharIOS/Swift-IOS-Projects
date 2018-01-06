@@ -89,7 +89,7 @@ make a view using UIView constructor
     let origin = CGPoint(x: 40, y: 20)
     let size = CGSize(width: 50, height: 50)        
     //CGRect => width * height
-    let frame = CGRect(origin: origin, size: size
+    let frame = CGRect(origin: origin, size: size)
     let squareView = UIView(frame: frame) 
     // construct directly:
     let ttl = UILabel(frame: CGRect(x: 20, y: 60, width: 150, height: 50))
