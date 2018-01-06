@@ -54,13 +54,13 @@
       //show it
       present(alert, animated: true, completion: nil)
 ```
-# more exmples of the same type of alert dialog builder:
+more exmples of the same type of alert dialog builder:
 [MyAlerts](https://github.com/zoharIOS/HackerU/tree/master/MyAlerts)
 
 ---
 [MyCustomViews](https://github.com/zoharIOS/HackerU/tree/master/MyCustomViews)
 ### custom Views :
-# make a class and then set the button in storyboard with identity inspector to this class
+make a class and then set the button in storyboard with identity inspector to this class
 ```swift
 class MyButton: UIButton {
 
@@ -71,16 +71,19 @@ class MyButton: UIButton {
     }
 
 }
-
+```
+in didlviewload change the UIView parameters such as:
+```swift
  btn: UIButton!
  btn.layer.borderColor = UIColor.red.cgColor
+ btn.setTitleColor(UIColor.red, for: UIControlState.normal)
  section: UIView! 
  section.layer.borderWidth = 2
 ```
 ---
 [MyDynViews](https://github.com/zoharIOS/HackerU/blob/master/MyDynViews/ViewController.swift)
 ## dynamic views
-# make a view using UIView constructor 
+make a view using UIView constructor 
 ```swift
     //origin & size
     let origin = CGPoint(x: 40, y: 20)
@@ -96,7 +99,7 @@ class MyButton: UIButton {
         
     UILabel(frame: CGRect(x: 20, y: 60, width: 150, height: 50))
  ```
-# after creating the desired view and adding properties to the look and feel you should add it to a parent groupView, for exmple to the super view:
+after creating the desired view and adding properties to the look and feel you should add it to a parent groupView, for exmple to the super view:
 ```swift
     view.addSubview(squareView)
  ```
