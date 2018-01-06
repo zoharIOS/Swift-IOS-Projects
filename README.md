@@ -5,10 +5,10 @@
 ---------------------------------------------------
 
 
-https://github.com/zoharIOS/HackerU/tree/master/AlertExercise 
+[AlertExercise](https://github.com/zoharIOS/HackerU/tree/master/AlertExercise)
 ### Plist :
-            //get data from plist
-        let path = Bundle.main.path(forResource: "users", ofType: "plist")!
+            //get data from plist
+        let path = Bundle.main.path(forResource: "users", ofType: "plist")!
         myUsers = NSDictionary(contentsOfFile: path) as! Dictionary
 ---        
 ### User defaults
