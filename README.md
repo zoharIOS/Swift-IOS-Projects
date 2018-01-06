@@ -8,13 +8,17 @@
 
 [AlertExercise](https://github.com/zoharIOS/HackerU/tree/master/AlertExercise)
 ### Plist :
+```swift
         let path = Bundle.main.path(forResource: "users", ofType: "plist")!
         myUsers = NSDictionary(contentsOfFile: path) as! Dictionary
----        
+```   
+---
 ### User defaults
+```swift
             private let prefs = UserDefaults.standard
             user = prefs.string(forKey: ViewController.LOG_USER)
             prefs.set(name, forKey: ViewController.LOG_USER)
+```
 ---
 ### UIALertcontrol
 ```swift
@@ -29,7 +33,7 @@
             tf.isSecureTextEntry = true
         })
 
-        func __okHandler__(action: UIAlertAction) {
+        func okHandler(action: UIAlertAction) {
         let name = alert.textFields![0].text!
         let pass = alert.textFields![1].text!
         if pass == myUsers[name] { //if password & user are ok
@@ -78,6 +82,7 @@ class MyButton: UIButton {
 [MyDynViews](https://github.com/zoharIOS/HackerU/blob/master/MyDynViews/ViewController.swift)
 ## dynamic views
 # make a view using UIView constructor 
+```swift
     //origin & size
     let origin = CGPoint(x: 40, y: 20)
     let size = CGSize(width: 50, height: 50)        
@@ -91,11 +96,15 @@ class MyButton: UIButton {
     ttl.layer.borderWidth = 1
         
     UILabel(frame: CGRect(x: 20, y: 60, width: 150, height: 50))
+ ```
 # after creating the desired view and adding properties to the look and feel you should add it to a parent groupView, for exmple to the super view:
+```swift
     view.addSubview(squareView)
+ ```
 # The link aboth shows exmples also for UIButton()
 ---
 # build dynamic labels on below of each other in a loop 
+ ```swift
     let movies = ["John wick", "John wick Part 2", "Jurassic park", "Freddy Krueger"]
     var y: CGFloat = 20 //reuse y position, start from status bar
     for m in movies {
@@ -112,10 +121,12 @@ class MyButton: UIButton {
        if v is UILabel { //each one that is label
           v.removeFromSuperview() //remove
         }
+```
 ---        
 [MyGradi](https://github.com/zoharIOS/HackerU/blob/master/MyGradi/ViewController.swift)
 ## Gradient
-    //in iOS gradient is a sort of layer
+ ```swift
+ //in iOS gradient is a sort of layer
     let layer = CAGradientLayer()
     //gradient colors
     layer.colors = [
@@ -129,9 +140,11 @@ class MyButton: UIButton {
 
     //add gradient layer to existing list of layers of that view
     view.layer.insertSublayer(layer, at: 0)
+```
 ---    
 # centering before adding to the super view
-    //directions
+ ```swift
+ //directions
     let l = layer //(aboth example)
     l.startPoint = CGPoint(x: 0, y: 0)
     l.endPoint = CGPoint(x: 1, y: 1)
@@ -144,7 +157,7 @@ class MyButton: UIButton {
     l.frame.size = CGSize(width: s.width / 2, height: s.height / 2)
     l.frame.origin.x = s.width / 4
     l.frame.origin.y = s.height / 4
-
+```
 
 
 
