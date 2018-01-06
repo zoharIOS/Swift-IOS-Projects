@@ -143,6 +143,25 @@ after creating the desired view and adding properties to the look and feel you s
     //add gradient layer to existing list of layers of that view
     view.layer.insertSublayer(layer, at: 0)
 ```
+```swift
+func grad2(){
+        let l = CAGradientLayer()
+        l.colors = [
+            UIColor.red.cgColor,
+            UIColor.blue.cgColor,
+            UIColor.red.cgColor,
+        ]
+        
+        //peak points
+        l.locations = [0.1, 0.3, 0.8]
+        let s = view.frame.size
+        l.frame = CGRect(
+            origin: CGPoint(x:0, y:0),
+            size: CGSize(width: s.width, height: s.height))
+        
+        view.layer.addSublayer(l)
+    }
+```
 ---    
 # centering before adding to the super view
  ```swift
