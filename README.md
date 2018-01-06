@@ -1,5 +1,6 @@
 # Welcome to IOS projects
 ----------------------------------
+# Cheet sheet
 ----------------------------------
 ## summary for the content of this repository:
 ---------------------------------------------------
@@ -7,7 +8,6 @@
 
 [AlertExercise](https://github.com/zoharIOS/HackerU/tree/master/AlertExercise)
 ### Plist :
-            //get <b>a from <b>st
         let path = Bundle.main.path(forResource: "users", ofType: "plist")!
         myUsers = NSDictionary(contentsOfFile: path) as! Dictionary
 ---        
