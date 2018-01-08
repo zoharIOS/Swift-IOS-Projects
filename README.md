@@ -9,7 +9,14 @@
 ### Plist :
 ```swift
         let path = Bundle.main.path(forResource: "users", ofType: "plist")!
-        myUsers = NSDictionary(contentsOfFile: path) as! Dictionary
+        myUsers = NSDictionary(contentsOfFile: path) as! Dictionary // contains username - password key - values
+        // asign variables pass , name
+        // check ig name & pass exsist in dictionary:
+        if pass == myUsers[name] { //if password & user are ok
+                //legal user -
+            } else {
+                //not found in dictionary, illegal user
+            }
 ```   
 ---
 ### User defaults
