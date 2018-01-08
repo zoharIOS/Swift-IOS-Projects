@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyInterAnim" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bMd-fh-scb">
+                                <rect key="frame" x="75" y="143.5" width="225" height="400.5"/>
+                                <color key="backgroundColor" red="0.82480636789999995" green="1" blue="0.76846180490000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FyG-b5-PIb">
+                                <rect key="frame" x="0.0" y="600" width="375" height="66.5"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bMd-fh-scb" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="0Bp-gS-Mr3"/>
+                            <constraint firstItem="FyG-b5-PIb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="I5S-dN-kVn"/>
+                            <constraint firstItem="FyG-b5-PIb" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.1" id="PdA-Fd-cpQ"/>
+                            <constraint firstItem="FyG-b5-PIb" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="QI5-qC-sF7"/>
+                            <constraint firstItem="bMd-fh-scb" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.6" id="Tye-o8-fjN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FyG-b5-PIb" secondAttribute="bottom" id="W1b-pM-jlz"/>
+                            <constraint firstItem="bMd-fh-scb" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.6" id="afi-bj-j3h"/>
+                            <constraint firstItem="bMd-fh-scb" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="fda-6Q-zPd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="footer" destination="FyG-b5-PIb" id="CXG-X3-qOE"/>
+                        <outlet property="section" destination="bMd-fh-scb" id="Aoe-ip-s9G"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-98.400000000000006" y="118.29085457271366"/>
+        </scene>
+    </scenes>
+</document>
