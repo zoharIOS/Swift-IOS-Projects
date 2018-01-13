@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <!-- import css file -->
+        <link rel="stylesheet" href="my.css"/>
+        <!-- import js file -->
+        <script src="my.js"></script>
+    </head>
+    <body>
+        <h1 id="ttl">Welcome</h1>
+        <input placeholder="user name" type="text" id="uName" onblur="validate(this)"/>
+        <input placeholder="password" type="password" id="uPass" onblur="validate(this)"/>
+        <button onmousedown="tryLogin(uName, uPass)">login</button>
+    </body>
+</html>
