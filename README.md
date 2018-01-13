@@ -320,8 +320,127 @@ class ViewController: UIViewController {
     }
 }
 ```
+# Login , Register , Tsble view , reading from file 
+nice function to read from two fields for user & password and return it as a credential (cred.user, cred.pass) struct 
+```swift
+class ViewController: UIViewController {
+
+    @IBOutlet var username: UITextField!
+    @IBOutlet var password: UITextField!
+    
+    var filePath: String!
+    var users: [String:String] = [:]
+    //user-pass;user-pass;user-pass;user-pass;user-pass;user-pass;
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let docs = NSSearchPathForDirectoriesInDomains(.documentDirectory,
+                                            .userDomainMask,
+                                            true)[0]
+        filePath = docs + "/users.txt"
+        loadUsers(readUsers())
+    }
 
 
+    @IBAction func login() {
+        let credi = getTexts()
+        if users[credi.user] == credi.pass {
+            //login
+            print("login good")
+            goToSecond()
+        } else {
+            print("not invalid login..")
+        }
+    }
+    
+    @IBAction func regist() {
+        let cred = getTexts()
+        do {
+            try (readUsers() + "\(cred.user)-\(cred.pass);").write(
+                toFile: filePath,
+                atomically: true,
+                encoding: .utf8)
+            users[cred.user] = cred.pass
+        } catch {
+            print("error writing")
+        }
+    }
+    
+    private func getTexts() -> (user: String, pass:String) {
+        return (user: username.text!, pass: password.text!)
+    }
+    
+    private func readUsers() -> String{
+        return (try? String(contentsOfFile: filePath)) ?? ""
+    }
+    
+    private func loadUsers(_ data: String) {
+        let usersStr: [Substring] = data.split(separator: ";")
+        
+        for uStr in usersStr {
+            let cred = uStr.split(separator: "-")
+            users["\(cred[0])"] = "\(cred[1])"
+        }
+    }
+    
+    func goToSecond() {
+        let next = storyboard!.instantiateViewController(withIdentifier: "second") as! SecondController
+        next.set(users: users)
+        next.set(filePath: filePath)
+        
+        show(next, sender: self)
+    }
+}
+```
+---
+```swift
+class SecondController: UIViewController, UITableViewDataSource {
+
+    @IBOutlet var tbl: UITableView!
+    
+    private var filePath: String!
+    private var users: [String:String]!
+    private var uNames: [String] = []
+    
+    override func viewDidLoad() {
+        
+        for (key, _) in users {
+            uNames.append(key)
+        }
+        tbl.reloadData()
+    }
+
+    public func set(filePath: String){
+        self.filePath = filePath
+    }
+    
+    public func set(users: [String: String]){
+        self.users = users
+    }
+    
+    @IBAction func deleteAllUsers() {
+        try! "".write(toFile: filePath,
+                 atomically: true,
+                 encoding: .utf8)
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return uNames.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        cell.textLabel?.text = uNames[indexPath.row]
+        
+        return cell
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        dismiss(animated: true, completion: nil)
+    }
+}
+```
 
 
 
