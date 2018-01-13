@@ -322,6 +322,13 @@ class ViewController: UIViewController {
 ```
 # Login , Register , Tsble view , reading from file 
 [project: FilesEx](https://github.com/zoharIOS/HackerU/tree/master/FilesEx)
+this projet contains two viewcontrollers.
+* firt contains two fieldtext for user and password. button for login and register.
+for new user & password, pressing register button saves this sequence user-pass to a file.
+in didLoad all the content of the file is loaded to a dictionary so each user&pass compare to this content in login button function, and if valid goToSecond view controller.
+* second view controllerr contains button "delete All" to delete all users from the file, touch any where in the screen to return back to first controller and a table view to present all the users from the file.
+the users and file path are sent from first controller to the second when login function excecute.
+attention:
 nice function to read from two fields for user & password and return it as a credential (cred.user, cred.pass) struct 
 ```swift
 class ViewController: UIViewController {
