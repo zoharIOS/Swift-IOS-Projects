@@ -3,7 +3,7 @@
 # Summary sheet
 ----------------------------------
 ---------------------------------------------------
-![GitHub Logo](https://vignette.wikia.nocookie.net/lapis/images/e/e5/Super_Mario_%21.png)
+![GitHub Logo](https://vignette.wikia.nocookie.net/lapis/images/e/e5/Super_Mario_%21.png | width=100)
 
 [AlertExercise](https://github.com/zoharIOS/HackerU/tree/master/AlertExercise)
 ### Plist :
@@ -1217,4 +1217,4 @@ class FourthController: UIViewController, UITableViewDataSource, UITableViewDele
 
 }
 ```
-![image try](https://github.com/zoharIOS/HackerU/blob/master/6063391-best-pictures.jpg)
+![image try](https://github.com/zoharIOS/HackerU/blob/master/6063391-best-pictures.jpg | width=100)
