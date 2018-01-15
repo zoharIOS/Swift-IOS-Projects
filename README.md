@@ -833,7 +833,8 @@ Note: my.html is a file created by the following definitions:
 [test the mvc] <https://github.com/zoharIOS/HackerU/blob/master/MyMVC.playground/Contents.swift>
 ---
 
-
+# Networking
+[Cocoa keys](https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html): NSAppTransportSecurity
 
 
 
