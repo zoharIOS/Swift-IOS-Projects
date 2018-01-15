@@ -827,14 +827,29 @@ class ViewController: UIViewController {
 Note: my.html is a file created by the following definitions:
 [files] (https://github.com/zoharIOS/HackerU/tree/master/MyWebView/MyWebView/files)
 ---
-# Protocol and [Animals] excresise: <https://github.com/zoharIOS/HackerU/tree/master/AnimalsEx.playground> 
+# Protocol and [Animals] excresise:(https://github.com/zoharIOS/HackerU/tree/master/AnimalsEx.playground)
 ---
-# MVC [controller, model , view] <https://github.com/zoharIOS/HackerU/tree/master/MyMVC.playground/Sources>
-[test the mvc] <https://github.com/zoharIOS/HackerU/blob/master/MyMVC.playground/Contents.swift>
+# MVC [controller, model , view](https://github.com/zoharIOS/HackerU/tree/master/MyMVC.playground/Sources)
+[test the mvc](https://github.com/zoharIOS/HackerU/blob/master/MyMVC.playground/Contents.swift)
 ---
 
 # Networking
-[Cocoa keys](https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html): NSAppTransportSecurity
-
+must configure: & info.plist [NSAppTransportSecurity](https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW33) 
+[Cocoa keys](https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html): 
+NSAppTransportSecurity : Dictionary {
+    NSAllowsArbitraryLoads : Boolean
+    NSAllowsArbitraryLoadsForMedia : Boolean
+    NSAllowsArbitraryLoadsInWebContent : Boolean
+    NSAllowsLocalNetworking : Boolean
+    NSExceptionDomains : Dictionary {
+        <domain-name-string> : Dictionary {
+            NSIncludesSubdomains : Boolean
+            NSExceptionAllowsInsecureHTTPLoads : Boolean
+            NSExceptionMinimumTLSVersion : String
+            NSExceptionRequiresForwardSecrecy : Boolean   // Default value is YES
+            NSRequiresCertificateTransparency : Boolean
+        }
+    }
+}
 
 
