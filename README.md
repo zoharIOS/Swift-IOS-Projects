@@ -857,7 +857,6 @@ inside existing info.plist: add to the dictionary the following key:
 ```swift
     <key>NSAppTransportSecurity</key>
     <dict>
-        <-- White list - http requests configuration-->
         <key>NSAllowsArbitraryLoads</key>
         <true/>
     </dict>
