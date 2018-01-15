@@ -829,7 +829,8 @@ Note: my.html is a file created by the following definitions:
 ---
 # Protocol and [Animals] excresise: (https://github.com/zoharIOS/HackerU/tree/master/AnimalsEx.playground) 
 
-
+# MVC [controller, model , view] (https://github.com/zoharIOS/HackerU/tree/master/MyMVC.playground/Sources)
+[test the mvc] (https://github.com/zoharIOS/HackerU/blob/master/MyMVC.playground/Contents.swift) 
 
 
 
