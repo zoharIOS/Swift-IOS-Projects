@@ -1,0 +1,11 @@
+let gidon = Human(name: "Gidon")
+let lion1 = Lion(name: "Bubu")
+let giraf = Giraffe(name: "Girgir")
+var p1: Plant? = Plant(name: "Orange")
+var p2: Plant? = Plant(name: "Banana")
+
+//gidon.eat(p1)
+//gidon.eat(lion1)
+gidon.eat(&p1)
+giraf.eat(&p1)
+lion1.eat(giraf)
