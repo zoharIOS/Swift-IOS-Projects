@@ -824,9 +824,10 @@ class ViewController: UIViewController {
     
 }
 ```
-Note: my.html is a file created by the following definitions: [files] (https://github.com/zoharIOS/HackerU/tree/master/MyWebView/MyWebView/files)
+Note: my.html is a file created by the following definitions:
+[files] (https://github.com/zoharIOS/HackerU/tree/master/MyWebView/MyWebView/files)
 ---
-
+# Protocol and [Animals] excresise: (https://github.com/zoharIOS/HackerU/tree/master/AnimalsEx.playground) 
 
 
 
