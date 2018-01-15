@@ -779,6 +779,37 @@ class ViewController: UIViewController {
     }
 }
 ```
+where AsyncTask class is:
+```swift
+public class AsyncTask <BGParam,BGResult>{
+    private var pre:(()->())?;//Optional closure -> called before the backgroundTask
+    private var bgTask:(_ param:BGParam)->BGResult;//background task
+    private var post:((_ param:BGResult)->())?;//Optional closure -> called after the backgroundTask
+    /**
+     *@param beforeTask Optional closure -> which called just before the background task
+     *@param backgroundTask closure -> the background task functionality with generic param & return
+     *@param afterTask Optional -> which called just after the background task
+     */
+    public init(beforeTask: (()->())?=nil, backgroundTask: @escaping (_ param:BGParam)->BGResult, afterTask:((_ param:BGResult)->())?=nil){
+        self.pre=beforeTask;
+        self.bgTask=backgroundTask;
+        self.post=afterTask;
+    }
+    /**
+     *Execution method for current backgroundTask with given parameter value in background thread.
+     *@param BGParam passed as a parameter to backgroundTask
+     */
+    public func execute(_ param:BGParam){
+        pre?()//if beforeTask exists - invoke it before bgTask
+        DispatchQueue.global(qos: .background).async {
+            let bgResult=self.bgTask(param);//execute backgroundTask in background thread
+            if(self.post != nil){//if afterTask exists - invoke it in UI thread after bgTask
+                DispatchQueue.main.async {self.post!(bgResult)}
+            }
+        }
+    }
+}
+```
 ---
 # Web View & safari
 
