@@ -3,7 +3,7 @@
 # Summary sheet
 ----------------------------------
 ---------------------------------------------------
-
+![GitHub Logo](https://vignette.wikia.nocookie.net/lapis/images/e/e5/Super_Mario_%21.png)
 
 [AlertExercise](https://github.com/zoharIOS/HackerU/tree/master/AlertExercise)
 ### Plist :
