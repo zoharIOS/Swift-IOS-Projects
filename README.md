@@ -834,8 +834,9 @@ Note: my.html is a file created by the following definitions:
 ---
 
 # Networking
-must configure: & info.plist [NSAppTransportSecurity](https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW33) 
-[Cocoa keys](https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html): 
+must configure: [NSAppTransportSecurity](https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW33)  & info.plist 
+[Cocoa keys](https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html):general concept: 
+```swift
 NSAppTransportSecurity : Dictionary {
     NSAllowsArbitraryLoads : Boolean
     NSAllowsArbitraryLoadsForMedia : Boolean
@@ -851,5 +852,14 @@ NSAppTransportSecurity : Dictionary {
         }
     }
 }
-
+```
+inside existing info.plist: add to the dictionary the following key:
+```swift
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <-- White list - http requests configuration-->
+        <key>NSAllowsArbitraryLoads</key>
+        <true/>
+    </dict>
+```
 
