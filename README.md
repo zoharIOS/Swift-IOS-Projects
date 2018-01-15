@@ -952,4 +952,151 @@ inside existing info.plist: add to the dictionary the following key:
         <true/>
     </dict>
 ```
+Only then you can:
+```swift
+class ViewController: UIViewController {
+    let session  = URLSession.shared
+    
+ @IBAction func req2() {
+        let req = URLRequest(url: URL(string: "http://nikita.hackeruweb.co.il:80/hackSwift/dugma.txt")!)
+        //use shared Session to send http Request
+        session.dataTask(with: req, completionHandler: {(d,r,e) in
+            let str = String(data: d!, encoding: .utf8)! // the return string from the url is: Vova,Shlomit,Batel,Sarit,Nikita,Deadpool
+            let names = str.components(separatedBy: ",") //split string by comma
+            for n in names {
+                print (n)
+            }
+        }).resume()
+    }
 
+ @IBOutlet var feed: UITextView!
+    
+    @IBAction func req3() {
+        let url = URL(string: "http://nikita.hackeruweb.co.il:80/hackSwift/dugma.txt")!
+        session.dataTask(with: url, completionHandler: {(d,r,e) in
+            AsyncTask(backgroundTask: { (d: Data) -> String in
+                return String(data: d, encoding: .utf8)!
+            }, afterTask: { (str) in
+                // in ui main
+                self.feed.text = str
+            }).execute(d!)
+        }).resume()
+    }    
+```
+Note: AsyncTask contains optional parameters, the first one is backgroundTask, I deleted it because it is optional and didn't need it here.
+
+---
+# Error exceptions , try and catch
+use do and then try for any function that throws error
+MYErrors.swift
+```swift
+class MyErrors {
+    //custom examples
+    struct GalError: Error {}
+    enum WorkError: Error {
+        case isSunday, notEnoughSleep, notEnoughCoffee
+    }
+    
+    //dangerous method
+    func doSomeBad() throws {
+        //some normal functionality
+        print("will be bad")
+        //actual danger
+        throw GalError()
+    }
+    
+    func notRealyBad() throws {
+        print("not realy bad")
+    }
+    
+    func goToWork() throws {
+        print("going to work")
+        throw WorkError.notEnoughSleep
+    }
+    
+    func badAndClean() throws {
+        //equivalent to finally - for cleanups
+        defer {
+            print("defer - clean up")
+        }
+        print("doing normal stuff")
+        throw GalError()
+    }
+    
+    //maybe throws
+    func badOrNot() throws {
+        defer {
+            print("bad or not - cleanup")
+        }
+        //some logic
+        if arc4random_uniform(10)%2 == 0 {
+            //not throwing
+        } else {
+            throw GalError()
+        }
+    }
+}
+```
+ViewController.swift
+```swift
+class ViewController: UIViewController {
+    let e = MyErrors()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        print ("entering to viewdidload")
+        //Example 1
+        do {
+            //can have multiple tries in the same block
+             try e.notRealyBad()
+             try e.doSomeBad()
+            
+            //success handling
+            
+        } catch {
+            //failure handling
+            print("error handler")
+        }
+        
+        //Example 2 - muliple catch block
+        do {
+            try e.goToWork()
+        } catch MyErrors.WorkError.isSunday {
+            print("return to sleep")
+        } catch MyErrors.WorkError.notEnoughSleep {
+            print("Drink more coffee")
+        } catch MyErrors.WorkError.notEnoughCoffee {
+            print("at this point there is not much you can do")
+        } catch {
+            print("another error")
+        }
+        
+        //Example 3
+        do {
+            try e.badAndClean()
+        } catch { }
+        
+        //Example 4 - inline syntax
+       // try! e.badOrNot() //if thrown - crash
+        try? e.badOrNot() //if thrown - return nil
+        
+    }
+    
+    
+    @IBAction func bad(_ sender: Any) {
+        do {
+            try e.doSomeBad()
+        } catch {
+            print("bad catched..")
+        }
+    }
+    
+    @IBAction func notBad(_ sender: Any) {
+        try? e.notRealyBad()
+    }
+    
+    @IBAction func badOrNot(_ sender: Any) {
+        try! e.badOrNot()
+    }
+}
+```
