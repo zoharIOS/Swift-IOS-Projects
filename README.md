@@ -1100,3 +1100,120 @@ class ViewController: UIViewController {
     }
 }
 ```
+# [Table View](https://github.com/zoharIOS/HackerU/tree/master/MyTables)
+# Importent !!! connect the tableview in the gui to the viewcontroller in the main storyboard
+ViewController.swift
+```swift
+class ViewController: UIViewController, UITableViewDataSource {
+    //number fo section (sub lists) - in table view
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    //how many rows in each section
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 100
+    }
+
+    //visual representation of each row
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let row = UITableViewCell()
+        
+        row.textLabel?.text = "Bubu is the king"
+        
+        return row
+    }
+}
+```
+SecondController.swift
+```swift
+class SecondController: UIViewController, UITableViewDataSource {
+
+    //DB simulation
+    let stuff: [[String]] = [
+        ["Kuba", "Pizza", "Hamburger", "Cuscus", "Hummus", "Pickles"],
+        ["iPhone 5", "iPhone X", "LG", "Nokia", "Motorola"],
+        ["Apple", "Lemon", "Tomato", "Banana"]
+    ]
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        //section for eacn inner array
+        return stuff.count
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        //row for each string
+        return stuff[section].count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        //assign relevant String by given section & row index
+        cell.textLabel?.text = stuff[indexPath.section][indexPath.row]
+        return cell
+    }
+}
+```
+ThridController.swift
+```swift
+class ThridController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+
+    //data source
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 18
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        cell.textLabel?.text = "section:\(indexPath.section), row:\(indexPath.row)"
+        return cell
+    }
+    
+    
+    //delegate
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("selected at section:\(indexPath.section) row:\(indexPath.row)")
+    }
+}
+```
+FourthController.swift
+```swift
+class FourthController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+
+    @IBOutlet var ttl:UILabel!
+    
+    let colors:[UIColor] = [UIColor.red, UIColor.blue, UIColor.cyan]
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return colors.count
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 8
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        cell.textLabel?.text = "row \(indexPath.section):\(indexPath.row)"
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        ttl.backgroundColor = colors[indexPath.section]
+        ttl.text = "row \(indexPath.row)"
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Header \(section)"
+    }
+    
+    func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+        return "Footer \(section)"
+    }
+
+}
+```
