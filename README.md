@@ -237,6 +237,55 @@ func grad2(){
     }
     
 ```
+---
+# Generic
+```swift
+public class MyGens{
+    public init() { }
+    
+    //method with generic parameter
+    public func printSome <Temp> (_ some: Temp){
+        print(some)
+    }
+    
+    //method with generic parameter & return type
+    public func singleVal <T> (_ val: T) -> [T] {
+        
+        return [val]
+    }
+    
+    public func swapVals <G> (v1: inout G, v2: inout G){
+        let temp = v1
+        v1 = v2
+        v2 = temp
+    }
+}
+```
+more generic (contents):
+```swift
+var mg = MyGens()
+//Example 1
+mg.printSome("Hello world")
+mg.printSome(100)
+mg.printSome(1.5)
+mg.printSome(false)
+
+//Example 2
+var nums:[Int] = mg.singleVal(4)
+print(nums)
+
+//Example 3
+var x = 10, y = 5
+mg.printSome([x, y])
+mg.swapVals(v1: &x, v2: &y)
+mg.printSome([x, y])
+
+var a = ["Orin","Yossi", "Dima"], b = ["Omri","Rami"]
+mg.printSome([a, b])
+mg.swapVals(v1: &a, v2: &b)
+mg.printSome([a, b])
+```
+---
 ## File System
 # CRUD = create, read , update, delete
 ```swift
