@@ -917,6 +917,78 @@ Note: my.html is a file created by the following definitions:
 [files](https://github.com/zoharIOS/HackerU/tree/master/MyWebView/MyWebView/files)
 ---
 # Protocol and [Animals excrecise:](https://github.com/zoharIOS/HackerU/tree/master/AnimalsEx.playground)
+protocol example:
+Drivable.swift
+```swift
+public protocol Drivable {
+    //method
+    func drive()
+    
+    //get property
+    var counter: Int { get }
+}
+```
+Fliable.swift
+```swift
+public protocol Fliable {
+    func takeOff()
+    
+    func land()
+    
+    var counter: Int {get}
+}
+```
+now we create classes that obey to those protocols:
+car.swift
+```swift
+public class Car: Drivable {
+    private var _counter = 0
+    public func drive(){
+        print("car is driving")
+        _counter += 1
+    }
+    public var counter: Int {
+        return _counter
+    }
+}
+```
+Helicopter.swift
+```swift
+public class Helicopter: Fliable {
+    private var _counter: Int = 0
+    public func takeOff(){
+        print("helicopter takes off")
+        _counter += 10
+    }
+    public func land(){
+        print("heli lands")
+    }
+    public var counter: Int {
+        return _counter
+    }
+}
+```
+plane is drivable and fliable:
+plane.swift
+```swift
+public class Plane: Fliable, Drivable {
+    private var _counter: Int = 0    
+    public func drive(){
+        _counter += 1
+        print("plane drives")
+    }
+    public func takeOff(){
+        print("plance takes off")
+        _counter += 10
+    }
+    public func land(){
+        print("plane lands")
+    }
+    public var counter: Int {
+        return _counter
+    }
+}
+```
 ---
 # [MVC controller, model , view](https://github.com/zoharIOS/HackerU/tree/master/MyMVC.playground/Sources)
 [test the mvc](https://github.com/zoharIOS/HackerU/blob/master/MyMVC.playground/Contents.swift)
