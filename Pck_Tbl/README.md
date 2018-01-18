@@ -7,9 +7,9 @@
 
 # simulator result:
 <img src="https://github.com/zoharIOS/HackerU/blob/master/Pck_Tbl/Pck_Tbl/simulator%20picker.PNG"  width="400" height="400" />
----
-viewcontroller.swift:
-```swift
+
+# viewcontroller.swift:
+
     import UIKit
 
     class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITableViewDataSource {
