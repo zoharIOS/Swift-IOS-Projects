@@ -1351,7 +1351,31 @@ and test this new functionality:
 var a = 42.timesTwo()
 print(a) // prints 84
 ```
+---
+# mutating
+mutating keyword – when you’re actually changing the variables in your struct!
 
+```swift
+struct Point {
+    var x: Int
+    var y: Int
+    
+    mutating func reborn(){
+//        self.x = 0
+//        self.y = 0
+        self = Point(x: 0, y: 0)
+    }
+}
+
+//Tests
+var p1 = Point(x: 3, y: 5)
+var p2 = p1
+print(p1)
+p1.reborn()
+print(p1)
+
+print(p2)
+```
 
 
 
