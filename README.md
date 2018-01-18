@@ -1288,3 +1288,75 @@ class FourthController: UIViewController, UITableViewDataSource, UITableViewDele
 
 }
 ```
+# [Extension , mutating](https://github.com/zoharIOS/HackerU/tree/master/MyExtensions.playground)
+person.swift
+```swift
+public class Person {
+    var name: String
+    
+    public init(){
+        self.name = "Incognito"
+    }
+}
+```
+extension:
+extension.swift
+```swift
+extension Person {
+    public func getName() -> String{
+        return self.name
+    }
+    
+    public func setName(_ name: String) {
+        self.name = name
+    }
+}
+```
+playground test
+```swift
+var p = Person()
+p.setName("Bubu")
+print("hello from \(p.getName())")
+```
+lets define protocol and later on asign it to the person
+LivingBeing.swift
+```swift
+public protocol LivingBeing {
+    func breath()
+}
+```
+extensions.swift
+```swift
+extension Person: LivingBeing {
+    public func breath() {
+        
+    }
+}
+```
+let us extend the Init (integer) type:
+```swift
+extension Int {
+    public func timesTwo() -> Int {
+        return self + self
+    }
+    
+    //with mutating
+    public mutating func twice() {
+        self += self
+    }
+}
+```
+and test this new functionality:
+```swift
+var a = 42.timesTwo()
+print(a) // prints 84
+```
+
+
+
+
+
+
+
+
+
