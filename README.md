@@ -3,7 +3,7 @@
 # Summary sheet
 ----------------------------------
 ---------------------------------------------------
-<img src="https://vignette.wikia.nocookie.net/lapis/images/e/e5/Super_Mario_%21.png" data-canonical-src="https://vignette.wikia.nocookie.net/lapis/images/e/e5/Super_Mario_%21.png" width="200" height="400" />
+<img src="https://vignette.wikia.nocookie.net/lapis/images/e/e5/Super_Mario_%21.png"  width="200" height="400" />
 
 ![GitHub Logo](https://vignette.wikia.nocookie.net/lapis/images/e/e5/Super_Mario_%21.png)
 
