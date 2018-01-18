@@ -1,5 +1,7 @@
 [TablesEx1](https://github.com/zoharIOS/HackerU/tree/master/Tbl_Pick1/TablesEx1/TablesEx1)
 # two controllers, one with tabelview and the other display selected items from the first
+ <img src="https://github.com/zoharIOS/HackerU/blob/master/Tbl_Pick1/storyboard.PNG"  width="400" height="400" />
+
 ViewController.swift
 ```swift
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
