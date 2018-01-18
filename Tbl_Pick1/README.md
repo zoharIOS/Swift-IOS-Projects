@@ -1,3 +1,89 @@
+[TablesEx1](https://github.com/zoharIOS/HackerU/tree/master/Tbl_Pick1/TablesEx1/TablesEx1)
+# two controllers, one with tabelview and the other display selected items from the first
+ViewController.swift
+```swift
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    let names = ["Zohar","Gidon","Yosi","Idan","Bubu","Groot","Deadpool"]
+    
+    var selectedNames:[String] = []
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return names.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        
+        cell.textLabel?.text = names[indexPath.row]
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let name = names[indexPath.row]
+//        let next = storyboard!.instantiateViewController(withIdentifier: "second") as! SecondController
+//
+//        next.set(msg: name)
+//        show(next, sender: self)
+        selectedNames.append(names[indexPath.row])
+    }
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        let index = selectedNames.index(of: names[indexPath.row])!
+        selectedNames.remove(at: index)
+    }
+    
+    @IBAction func goNext(){
+        let next = storyboard!.instantiateViewController(withIdentifier: "second") as! SecondController
+        
+        //pass data
+        next.set(names: selectedNames)
+        
+        show(next, sender: self)
+    }
+}
+
+```
+SecondController.swift
+```swift
+class SecondController: UIViewController {
+
+    @IBOutlet var ttl: UILabel!
+    private var msg: String!
+    private var names:[String]!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        //ttl.text = msg
+        ttl.text = "\(names!)"
+    }
+    
+    public func set(msg: String) {
+        self.msg = msg
+    }
+    
+    public func set(names: [String]){
+        self.names = names
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        dismiss(animated: true, completion: nil)
+    }
+
+}
+```
+note: at first we selected only one item in the table , pressed the button gonext() and pass with next.set(msg: name)
+and later on we enabled multiple selection in the table and passed [String] in selectedNames variable
+enable multiple selecetion:
+
+
+---
 [TablesEx2](https://github.com/zoharIOS/HackerU/tree/master/Tbl_Pick1/TablesEx2/TablesEx2)
 # plist  and tableview
 items.plist
