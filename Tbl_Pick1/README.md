@@ -81,9 +81,10 @@ class SecondController: UIViewController {
 note: at first we selected only one item in the table , pressed the button gonext() and pass with next.set(msg: name)
 and later on we enabled multiple selection in the table and passed [String] in selectedNames variable
 enable multiple selecetion:
-
+ <img src="https://vignette.wikia.nocookie.net/lapis/images/e/e5/Super_Mario_%21.png"  width="200" height="200" />
 
 ---
+
 [TablesEx2](https://github.com/zoharIOS/HackerU/tree/master/Tbl_Pick1/TablesEx2/TablesEx2)
 # plist  and tableview
 items.plist
