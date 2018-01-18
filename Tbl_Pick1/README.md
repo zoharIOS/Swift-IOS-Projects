@@ -1,7 +1,9 @@
 [Mypicker](https://github.com/zoharIOS/HackerU/tree/master/Tbl_Pick1/MyPicker)
 
 simple tab bar controller and two views, each contains pickerview with a content
- <img src="https://github.com/zoharIOS/HackerU/blob/master/Tbl_Pick1/MyPicker/storyboard.PNG"  width="200" /> 
+
+<img src="https://github.com/zoharIOS/HackerU/blob/master/Tbl_Pick1/MyPicker/storyboard.PNG"  width="600" /> 
+
 ViewController.swift
 ```swift
 class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
