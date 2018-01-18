@@ -1,3 +1,60 @@
+[Mypicker](https://github.com/zoharIOS/HackerU/tree/master/Tbl_Pick1/MyPicker)
+
+simple tab bar controller and two views, each contains pickerview with a content
+ <img src="https://github.com/zoharIOS/HackerU/blob/master/Tbl_Pick1/MyPicker/storyboard.PNG"  width="200" /> 
+ViewController.swift
+```swift
+class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+    
+    //how many components (slots) in picker
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    //number of rows in each component
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return 10
+    }
+
+    //title for each component
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return "Bubu \(row)"
+    }
+}
+```
+SecondViewController.swift
+```swift
+class SecondViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+    
+    let stuff = [
+        "Apple",
+        "Seven",
+        "Heart",
+        "Cherry",
+        "Diamond",
+        "Clubs",
+        "Spades",
+        "Jackpot"
+    ]
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 3
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return stuff.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return stuff[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        print("\(component), \(row): \(stuff[row])")
+    }
+}
+```
+---
 [Mytables2](https://github.com/zoharIOS/HackerU/tree/master/Tbl_Pick1/MyTables2)
 
 table view and textfield to filter the table
