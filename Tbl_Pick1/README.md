@@ -1,3 +1,55 @@
+[Mytables2]()
+table view and textfield to filter the table
+```swift
+class ViewController: UIViewController, UITableViewDataSource, UITextViewDelegate {
+   
+    @IBOutlet var tbl: UITableView!
+    
+    let items = ["Omri", "Gal", "Nikita", "Nevoa", "Rafael", "Kim"]
+    var selectedItems: [String]!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        selectedItems = items
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return selectedItems.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        
+        cell.textLabel?.text = selectedItems[indexPath.row]
+        
+        return cell
+    }
+
+    //event editing changed
+    @IBAction func filter(_ sender: UITextField) {
+        //fiter items
+        let txt = sender.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        if txt.isEmpty {
+            //show all items
+            selectedItems = items
+        } else {
+            //filter
+            selectedItems = []
+            for i in items {
+                if i.lowercased().contains(txt.lowercased()) {
+                    selectedItems.append(i)
+                }
+            }
+        }
+        
+        //refresh
+        tbl.reloadData()
+    }
+}
+```
+---
 [TablesEx1](https://github.com/zoharIOS/HackerU/tree/master/Tbl_Pick1/TablesEx1/TablesEx1)
 # two controllers, one with tabelview and the other display selected items from the first
  <img src="https://github.com/zoharIOS/HackerU/blob/master/Tbl_Pick1/storyboard.PNG"  width="400" height="400" />
