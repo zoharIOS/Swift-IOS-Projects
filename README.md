@@ -1,11 +1,8 @@
 # Welcome to IOS projects
 ----------------------------------
-# Summary sheet
+# Summary sheet  <img src="https://vignette.wikia.nocookie.net/lapis/images/e/e5/Super_Mario_%21.png"  width="200" height="200" />
 ----------------------------------
 ---------------------------------------------------
-<img src="https://vignette.wikia.nocookie.net/lapis/images/e/e5/Super_Mario_%21.png"  width="200" height="400" />
-
-![GitHub Logo](https://vignette.wikia.nocookie.net/lapis/images/e/e5/Super_Mario_%21.png)
 
 [AlertExercise](https://github.com/zoharIOS/HackerU/tree/master/AlertExercise)
 ### Plist :
