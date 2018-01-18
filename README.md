@@ -484,7 +484,7 @@ class ViewController: UIViewController {
 }
 ```
 ---
-# Login , Register , Tsble view , reading from file 
+# Login , Register , Table view , reading from file 
 [project: FilesEx](https://github.com/zoharIOS/HackerU/tree/master/FilesEx)
 this projet contains two viewcontrollers.
 * firt contains two fieldtext for user and password. button for login and register.
@@ -837,7 +837,7 @@ class ViewController: UIViewController {
     }
 }
 ```
-where AsyncTask class is:
+where AsyncTask class is: [download](https://raw.githubusercontent.com/zoharIOS/HackerU/master/MyAsync/MyAsync/AsyncTask.swift)
 ```swift
 public class AsyncTask <BGParam,BGResult>{
     private var pre:(()->())?;//Optional closure -> called before the backgroundTask
