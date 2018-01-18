@@ -1,9 +1,9 @@
 # main story board:
- <img src="https://github.com/zoharIOS/HackerU/blob/master/Pck_Tbl/Pck_Tbl/picker.jpg"  width="200" height="200" />
+ <img src="https://github.com/zoharIOS/HackerU/blob/master/Pck_Tbl/Pck_Tbl/picker.jpg"  width="400" height="400" />
 # menu
-<img src="https://github.com/zoharIOS/HackerU/blob/master/Pck_Tbl/Pck_Tbl/menu%20plist.PNG"  width="200" height="200" />
+<img src="https://github.com/zoharIOS/HackerU/blob/master/Pck_Tbl/Pck_Tbl/menu%20plist.PNG"  width="400" height="400" />
 # simultor result:
-<img src="https://github.com/zoharIOS/HackerU/blob/master/Pck_Tbl/Pck_Tbl/simulator%20picker.PNG"  width="200" height="200" />
+<img src="https://github.com/zoharIOS/HackerU/blob/master/Pck_Tbl/Pck_Tbl/simulator%20picker.PNG"  width="400" height="400" />
 # viewcontroller.swift:
 ```swift
 import UIKit
