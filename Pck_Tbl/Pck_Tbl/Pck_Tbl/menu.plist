@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Appetizers</key>
+    <array>
+        <string>Pimiento</string>
+        <string>Ravioli</string>
+        <string>Guacamole</string>
+        <string>Cannellini</string>
+        <string>Spiced Olives</string>
+        <string>Caviar Rounds</string>
+    </array>
+	<key>Fruits</key>
+	<array>
+		<string>Peach</string>
+		<string>Lichi</string>
+		<string>Watermelon</string>
+		<string>Melon</string>
+		<string>Apple</string>
+		<string>Banana</string>
+		<string>Pear</string>
+	</array>
+	<key>Sweets</key>
+	<array>
+		<string>Froyo</string>
+		<string>Gingerbread</string>
+		<string>Honeycomb</string>
+		<string>IceCream</string>
+		<string>JellyBean</string>
+		<string>KitKat</string>
+		<string>Lollipop</string>
+		<string>Marshmallow</string>
+	</array>
+	<key>Hot drinks</key>
+	<array>
+		<string>Hot cider</string>
+		<string>Coffee</string>
+		<string>Black Coffee</string>
+		<string>Cappuccino</string>
+		<string>Machiato</string>
+	</array>
+	<key>Cold drinks</key>
+	<array>
+		<string>Water</string>
+		<string>Squeesed juice</string>
+		<string>Milkshake</string>
+		<string>Smoothie</string>
+		<string>Cider</string>
+	</array>
+</dict>
+</plist>
