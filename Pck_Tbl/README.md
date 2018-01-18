@@ -1,1 +1,2 @@
-REDM ME
+main story board:
+<image>
