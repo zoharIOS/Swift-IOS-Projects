@@ -27,7 +27,7 @@ class MovieTableCell: UITableViewCell {
     @IBOutlet var desc: UITextView!
 }
 ```
-viewcontroller.swift
+ViewController.swift
 ```swift
 class ViewController: UIViewController, UITableViewDataSource {
 
