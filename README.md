@@ -11,6 +11,7 @@ put a table view inside the viewcontroller and then drag and drop inside a tabel
 <img src="https://github.com/zoharIOS/HackerU/blob/master/MyCustomTables/simulator.PNG"/>
 
 the following class shell be asign to the tabelviewcell in the storyboard action
+
 MyCustomCell.swift
 ```swift
 class MyCustomCell: UITableViewCell {
