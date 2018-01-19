@@ -5,8 +5,9 @@
 ---------------------------------------------------
 [MyCustomTables](https://github.com/zoharIOS/HackerU/tree/master/MyCustomTables)
 <img src="https://github.com/zoharIOS/HackerU/blob/master/MyCustomTables/storyboard.PNG"/>
-put a table view inside the viewcontroller and then drag and drop inside a tabelviewcell
- <img src="https://github.com/zoharIOS/HackerU/blob/master/MyCustomTables/tableviewcell.PNG"  width="200" />
+
+put a table view inside the viewcontroller and then drag and drop inside a tabelviewcell  <img src="https://github.com/zoharIOS/HackerU/blob/master/MyCustomTables/tableviewcell.PNG"  width="200" />
+
 <img src="https://github.com/zoharIOS/HackerU/blob/master/MyCustomTables/simulator.PNG"/>
 
 the following class shell be asign to the tabelviewcell in the storyboard action
