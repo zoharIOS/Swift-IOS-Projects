@@ -18,6 +18,7 @@ enable networking in info.plist: (in the correct file and not under tests!)<img 
 ```
 in storyboard define tableview , tabelviewcell, inside of the cell define an image, label and textview
 asign the cell with the following class:
+
 MovieTableCell.swift
 ```swift
 class MovieTableCell: UITableViewCell {
