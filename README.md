@@ -8,6 +8,15 @@ custom tabelview that presents an image and a label
 <img src="https://github.com/zoharIOS/HackerU/blob/master/Movies/simulator.PNG" width=100/>
 
 define the p.list (copy and past) [movies.plist](https://github.com/zoharIOS/HackerU/blob/master/Movies/Movies/movies.plist)
+enable networking in info.plist: (in the correct file and not under tests!)<img src="https://github.com/zoharIOS/HackerU/blob/master/Movies/info%20plist.PNG" width=100/>
+```swift
+  <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsArbitraryLoads</key>
+        <true/>
+    </dict>
+```
+
 TODO: COMPLETE...MOVIES
 
 ---
