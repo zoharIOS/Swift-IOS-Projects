@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Gsd-Ms-JWf">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Bubu-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Screens6" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.34069316440000003" green="1" blue="0.30965152000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Bubu" id="Ufx-c1-rfn">
+                        <barButtonItem key="rightBarButtonItem" title="to groot" id="J3y-ai-mbM">
+                            <connections>
+                                <segue destination="Bbp-SN-eDt" kind="show" id="1vJ-Tf-jSm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="513" y="-36"/>
+        </scene>
+        <!--I am Groot-->
+        <scene sceneID="YOU-lL-TjQ">
+            <objects>
+                <viewController id="Bbp-SN-eDt" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5nM-At-zWZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <viewLayoutGuide key="safeArea" id="UQJ-NC-R4u"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="I am Groot" id="oUG-Bx-BKT">
+                        <barButtonItem key="backBarButtonItem" title="Groot" id="nAS-WU-fw6"/>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Deadpool" id="ul9-Md-Xnx">
+                                <connections>
+                                    <segue destination="MVf-5A-e06" kind="show" id="mw6-hZ-HSj"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="R" id="2XE-3u-WFR">
+                                <connections>
+                                    <segue destination="TjM-OO-Ya1" kind="show" id="LyR-dy-psy"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Md-jL-gBx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1278" y="-36"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="bjw-lk-Mgb">
+            <objects>
+                <viewController id="TjM-OO-Ya1" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EkL-Im-KPG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uHY-IR-YBT">
+                                <rect key="frame" x="16" y="350.5" width="343" height="30"/>
+                                <color key="backgroundColor" red="0.93402789070000003" green="1" blue="0.0030428238330000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.87307891728346831" green="0.87307891728346831" blue="0.87307891728346831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="uHY-IR-YBT" firstAttribute="leading" secondItem="8gb-9u-ade" secondAttribute="leading" constant="16" id="I8d-h3-l5X"/>
+                            <constraint firstItem="uHY-IR-YBT" firstAttribute="centerY" secondItem="8gb-9u-ade" secondAttribute="centerY" id="fXs-I8-zmL"/>
+                            <constraint firstItem="uHY-IR-YBT" firstAttribute="centerX" secondItem="8gb-9u-ade" secondAttribute="centerX" id="fep-Wn-lga"/>
+                            <constraint firstItem="8gb-9u-ade" firstAttribute="trailing" secondItem="uHY-IR-YBT" secondAttribute="trailing" constant="16" id="zkM-nE-zAp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8gb-9u-ade"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gKS-zL-Su4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2060" y="389"/>
+        </scene>
+        <!--Deadpool-->
+        <scene sceneID="Oj2-j7-FP9">
+            <objects>
+                <viewController id="MVf-5A-e06" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0bB-LL-cMl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="deadpool2" translatesAutoresizingMaskIntoConstraints="NO" id="vE9-kV-bvD">
+                                <rect key="frame" x="0.0" y="225" width="375" height="281"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="vE9-kV-bvD" secondAttribute="height" multiplier="4:3" id="XDh-C7-18l"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.43330225644057219" blue="0.4792465886142353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vE9-kV-bvD" firstAttribute="width" secondItem="0bB-LL-cMl" secondAttribute="width" id="4Bd-Vf-Pey"/>
+                            <constraint firstItem="vE9-kV-bvD" firstAttribute="centerY" secondItem="wak-sX-neQ" secondAttribute="centerY" id="rSw-VJ-GQ7"/>
+                            <constraint firstItem="vE9-kV-bvD" firstAttribute="centerX" secondItem="wak-sX-neQ" secondAttribute="centerX" id="zYr-E5-RZN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wak-sX-neQ"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Deadpool" id="ZoU-bb-dMQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3mv-AA-YlM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2060" y="-330"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Jwi-Wa-1Td">
+            <objects>
+                <navigationController id="Gsd-Ms-JWf" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aNB-x7-abw">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="CoA-yF-czF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QNq-td-2Ms" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-303" y="-36"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="deadpool2" width="436" height="370"/>
+    </resources>
+</document>
