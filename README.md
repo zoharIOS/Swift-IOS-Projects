@@ -3,6 +3,45 @@
 # Summary sheet  <img src="https://vignette.wikia.nocookie.net/lapis/images/e/e5/Super_Mario_%21.png"  width="200" height="200" />
 ----------------------------------
 ---------------------------------------------------
+[MyCustomTables](https://github.com/zoharIOS/HackerU/tree/master/MyCustomTables)
+MyCustomCell.swift
+```swift
+class MyCustomCell: UITableViewCell {
+
+    private var value: Int = 0
+    @IBOutlet weak var numLbl: UILabel!
+    
+    @IBAction func plusOne(_ sender: UIButton) {
+        value += 1
+        numLbl.text = "\(value)"
+    }
+}
+```
+ViewController.swift
+```swift
+class ViewController: UIViewController, UITableViewDataSource {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        //get cell from tableviews custom cells bu identifier
+        let cell = tableView.dequeueReusableCell(withIdentifier: "myCell") as! MyCustomCell
+        
+        //we have access to custom views and functions
+        //cell.numLbl
+        //cell.plusOne()
+        
+        return cell
+    }
+}
+```
+---
 # tabelView presents json data from a server
 ```swift
 class ViewController: UIViewController, UITableViewDataSource {
