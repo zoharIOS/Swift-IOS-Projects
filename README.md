@@ -8,9 +8,10 @@ custom tabelview that presents an image and a label
 <img src="https://github.com/zoharIOS/HackerU/blob/master/Movies/simulator.PNG" width=100/>
 
 define the p.list (copy and past) [movies.plist](https://github.com/zoharIOS/HackerU/blob/master/Movies/Movies/movies.plist)
+TODO: COMPLETE...MOVIES
 
 ---
-[MyCustomTables](https://github.com/zoharIOS/HackerU/tree/master/MyCustomTables)
+# [MyCustomTables](https://github.com/zoharIOS/HackerU/tree/master/MyCustomTables)
 <img src="https://github.com/zoharIOS/HackerU/blob/master/MyCustomTables/storyboard.PNG"/>
 
 put a table view inside the viewcontroller and then drag and drop inside a tabelviewcell  <img src="https://github.com/zoharIOS/HackerU/blob/master/MyCustomTables/tableviewcell.PNG"  width="200" />
