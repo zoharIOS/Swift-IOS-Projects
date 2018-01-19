@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Deadpool</key>
+	<array>
+		<string>A fast-talking mercenary with a morbid sense of humor is subjected to a rogue experiment that leaves him with accelerated healing powers and a quest for revenge.</string>
+		<string>https://images.moviepilot.com/image/upload/c_fill,h_630,q_auto:best,w_1200/iloar0rvcsy1bhmpy0at.jpg</string>
+	</array>
+	<key>Jurassic world</key>
+	<array>
+		<string>A new theme park is built on the original site of Jurassic Park. </string>
+		<string>https://vignette.wikia.nocookie.net/jurassicpark/images/d/de/Jurassic_park.jpg/revision/latest?cb=20131014161332</string>
+	</array>
+	<key>San Adreas</key>
+	<array>
+		<string>In the aftermath of a massive earthquake in California, a rescue-chopper pilot makes a dangerous journey across the state in order to rescue his daughter.</string>
+		<string>http://t2.gstatic.com/images?q=tbn:ANd9GcREw5zrbJAkN1pz2BSXtv-ydkAzIzrEPfjKg5C5QtSaZiqGI0A1</string>
+	</array>
+	<key>Tomorowland</key>
+	<array>
+		<string>Bound by a shared destiny, a teen bursting with scientific curiosity and a former boy-genius inventor embark on a mission to unearth the secrets of a place somewhere in time and space that exists in their collective memory.</string>
+		<string>http://cdn1.sciencefiction.com/wp-content/uploads/2015/04/Tomorrowland.png</string>
+	</array>
+	<key>Star Wars: The Last Jedi</key>
+	<array>
+		<string>Rey develops her newly discovered abilities with the guidance of Luke Skywalker, who is unsettled by the strength of her powers. Meanwhile, the Resistance prepares for battle with the First Order.</string>
+		<string>http://starwarsblog.starwars.com/wp-content/uploads/2017/01/sw-the-last-jedi-tall-1200x630.jpg</string>
+	</array>
+</dict>
+</plist>
