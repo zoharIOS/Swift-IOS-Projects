@@ -234,7 +234,7 @@ for item in jObject {
 ```
 ---
 [AlertExercise](https://github.com/zoharIOS/HackerU/tree/master/AlertExercise)
-### Plist :
+### Plist : 
 ```swift
         let path = Bundle.main.path(forResource: "users", ofType: "plist")!
         myUsers = NSDictionary(contentsOfFile: path) as! Dictionary // contains username - password key - values
@@ -246,6 +246,7 @@ for item in jObject {
                 //not found in dictionary, illegal user
             }
 ```   
+[MyPlist](https://github.com/zoharIOS/HackerU/tree/master/myPlist)
 ---
 ### User defaults 
 
