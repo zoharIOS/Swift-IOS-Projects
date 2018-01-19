@@ -247,12 +247,48 @@ for item in jObject {
             }
 ```   
 ---
-### User defaults
+### User defaults 
+
 ```swift
             private let prefs = UserDefaults.standard
             user = prefs.string(forKey: ViewController.LOG_USER)
             prefs.set(name, forKey: ViewController.LOG_USER)
 ```
+[MyUserDefaults](https://github.com/zoharIOS/HackerU/tree/master/MyUserDefaults)
+
+this projects include textfield, label, 3 buttons for : save,load and delete.
+ViewController.swift
+```swift
+class ViewController: UIViewController {
+
+    let MESSAGE = "msg"
+    
+    @IBOutlet var input: UITextField!
+    @IBOutlet var output: UILabel!
+    
+    let prefs = UserDefaults.standard
+    
+    
+    @IBAction func save() { //save value to user defaults
+        prefs.set(input.text!, forKey: MESSAGE)
+    }
+    
+    @IBAction func load() { // load value from your defaults
+//        if let msg = prefs.string(forKey: "msg") {
+//            output.text = msg
+//        } else {
+//            output.text = "no message"
+//        }
+        let msg = prefs.string(forKey: MESSAGE)
+        output.text = msg ?? "No message"
+    }
+    
+    @IBAction func del() { //
+        prefs.removeObject(forKey: MESSAGE)
+    }
+}
+```
+
 ---
 ### UIALertcontrol
 ```swift
