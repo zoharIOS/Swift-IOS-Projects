@@ -3,7 +3,121 @@
 # Summary sheet  <img src="https://vignette.wikia.nocookie.net/lapis/images/e/e5/Super_Mario_%21.png"  width="200" height="200" />
 ----------------------------------
 ---------------------------------------------------
+# tabelView presents json data from a server
+```swift
+class ViewController: UIViewController, UITableViewDataSource {
+    typealias Coin = [String: Any]
 
+    var coins: [Coin] = []
+    @IBOutlet var tbl: UITableView!
+    
+    override func viewDidAppear(_ animated: Bool) {
+        let url = URL(string: "https://api.coinmarketcap.com/v1/ticker/?limit=10")!
+        URLSession.shared.dataTask(with: url, completionHandler: {(d,r,e) in
+            AsyncTask(backgroundTask: { (d: Data) -> [Coin]? in
+                return (try? JSONSerialization.jsonObject(with: d, options: .mutableContainers)) as? [Coin]
+            }, afterTask: { coins in
+                if coins == nil {print("nil was found HERE")}
+                self.coins = coins ?? []
+                self.tbl.reloadData()
+            }).execute(d!)
+        }).resume()
+    }
+
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return coins.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        let index = indexPath.row
+        cell.textLabel?.text = "\(coins[index]["name"]!) \(coins[index]["price_usd"]!)"
+        return cell
+    }
+}
+
+```
+the json response looks like that:
+```
+[
+    {
+        "id": "bitcoin", 
+        "name": "Bitcoin", 
+        "symbol": "BTC", 
+        "rank": "1", 
+        "price_usd": "11465.7", 
+        "price_btc": "1.0", 
+        "24h_volume_usd": "13844400000.0", 
+        "market_cap_usd": "192757048762", 
+        "available_supply": "16811625.0", 
+        "total_supply": "16811625.0", 
+        "max_supply": "21000000.0", 
+        "percent_change_1h": "-0.01", 
+        "percent_change_24h": "1.16", 
+        "percent_change_7d": "-16.56", 
+        "last_updated": "1516341265"
+    }, 
+    {
+        "id": "ethereum", 
+        "name": "Ethereum", 
+        "symbol": "ETH", 
+        "rank": "2", 
+        "price_usd": "1035.88", 
+        "price_btc": "0.0912114", 
+        "24h_volume_usd": "5294810000.0", 
+        "market_cap_usd": "100554747642", 
+        "available_supply": "97071811.0", 
+        "total_supply": "97071811.0", 
+        "max_supply": null, 
+        "percent_change_1h": "-0.12", 
+        "percent_change_24h": "3.29", 
+        "percent_change_7d": "-14.01", 
+        "last_updated": "1516341552"
+    }, .....
+    ]
+```
+
+---
+# json
+serialise deserialise
+```swift
+//Serialize
+let object: [String: Any] = ["grade 1": 10,"grade 2": 20,"grade 3": 30,"grade 4": 40] //some object
+let jsonData = try JSONSerialization.data(withJSONObject: object, options: .prettyPrinted)// serialize to Data
+let jsonStr = String(data: jsonData, encoding: .utf8)!
+print(jsonStr)
+
+let json = """
+[
+    {
+        "first": "Bubu",
+        "last": "Bubu is the king",
+        "gender": "male"
+    },
+    {
+        "first": "Groot",
+        "last": "I am Groot",
+        "gender": "other"
+    },
+    {
+        "first": "Deadpool",
+        "last": "Chimichangas",
+        "gender": "male"
+    }
+]
+"""
+
+//convert to swift object
+let jObject = try JSONSerialization.jsonObject(with: json.data(using: .utf8)!, options: .mutableContainers) as! [[String: Any]]
+
+//work with object from json
+for item in jObject {
+    print("first name: \(item["first"]!)")
+}
+
+```
+---
 [AlertExercise](https://github.com/zoharIOS/HackerU/tree/master/AlertExercise)
 ### Plist :
 ```swift
