@@ -4,6 +4,8 @@
 ----------------------------------
 ---------------------------------------------------
 [MyCustomTables](https://github.com/zoharIOS/HackerU/tree/master/MyCustomTables)
+<img src="https://github.com/zoharIOS/HackerU/blob/master/MyCustomTables/storyboard.PNG"/>
+<img src="https://github.com/zoharIOS/HackerU/blob/master/MyCustomTables/simulator.PNG"/>
 MyCustomCell.swift
 ```swift
 class MyCustomCell: UITableViewCell {
