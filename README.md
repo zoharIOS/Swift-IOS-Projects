@@ -4,7 +4,7 @@
 ----------------------------------
 ---------------------------------------------------
 # Movies
-<img src="https://github.com/zoharIOS/HackerU/blob/master/Movies/simulator.PNG width=100"/>
+<img src="https://github.com/zoharIOS/HackerU/blob/master/Movies/simulator.PNG" width=100"/>
 
 ---
 [MyCustomTables](https://github.com/zoharIOS/HackerU/tree/master/MyCustomTables)
