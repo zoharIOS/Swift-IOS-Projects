@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict> <!--root-->
+        <key>Groot</key>
+        <dict>
+            <key>bgColor</key>
+            <array> <!--Yellow-->
+                <real>1.0</real> <!--Red-->
+                <real>1.0</real> <!--Green-->
+                <real>0.0</real> <!--Blue-->
+                <real>1.0</real> <!--Alpha-->
+            </array>
+            <key>txtColor</key>
+            <array> <!--Cyan-->
+                <real>0.0</real> <!--Red-->
+                <real>1.0</real> <!--Green-->
+                <real>1.0</real> <!--Blue-->
+                <real>1.0</real> <!--Alpha-->
+            </array>
+        </dict>
+        
+        <key>Bubu</key>
+        <dict>
+            <key>bgColor</key>
+            <array> <!--Magenta-->
+                <real>1.0</real> <!--Red-->
+                <real>0.0</real> <!--Green-->
+                <real>1.0</real> <!--Blue-->
+                <real>1.0</real> <!--Alpha-->
+            </array>
+            <key>txtColor</key>
+            <array> <!--White-->
+                <real>1.0</real> <!--Red-->
+                <real>1.0</real> <!--Green-->
+                <real>1.0</real> <!--Blue-->
+                <real>1.0</real> <!--Alpha-->
+            </array>
+        </dict>
+    </dict>
+</plist>
+
+
+
+
+
+
+
+
+
+
