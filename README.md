@@ -8,7 +8,7 @@ custom tabelview that presents an image and a label
 <img src="https://github.com/zoharIOS/HackerU/blob/master/Movies/simulator.PNG" width=100/>
 
 define the p.list (copy and past) [movies.plist](https://github.com/zoharIOS/HackerU/blob/master/Movies/Movies/movies.plist)
-enable networking in info.plist: (in the correct file and not under tests!)<img src="https://github.com/zoharIOS/HackerU/blob/master/Movies/info%20plist.PNG" width=100/>
+enable networking in info.plist: (in the correct file and not under tests!)<img src="https://github.com/zoharIOS/HackerU/blob/master/Movies/info%20plist.PNG" width=400/>
 ```swift
   <key>NSAppTransportSecurity</key>
     <dict>
@@ -16,8 +16,57 @@ enable networking in info.plist: (in the correct file and not under tests!)<img 
         <true/>
     </dict>
 ```
+in storyboard define tableview , tabelviewcell, inside of the cell define an image, label and textview
+asign the cell with the following class:
+MovieTableCell.swift
+```swift
+class MovieTableCell: UITableViewCell {
+    @IBOutlet var imgV: UIImageView!
+    @IBOutlet var ttl: UILabel!
+    @IBOutlet var desc: UITextView!
+}
+```
+finally:
+viewcontroller.swift
+```swift
+class ViewController: UIViewController, UITableViewDataSource {
 
-TODO: COMPLETE...MOVIES
+    var movies: [String: [String]] = [:]
+    var titles: [String] = []
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let path = Bundle.main.path(forResource: "movies", ofType: "plist")!
+        movies = NSDictionary(contentsOfFile: path) as! Dictionary
+        titles = Array(movies.keys)
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return titles.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "movieCell") as! MovieTableCell
+        let title = titles[indexPath.row] //get title
+        
+        cell.ttl.text = title //set label for movie title
+        cell.desc.text = movies[title]![0] //set text for textView
+        
+        //set img
+        let url = URL(string: movies[title]![1])! //url to img
+        URLSession.shared.dataTask(with: url) { (imgData, r, e) in
+            let img = UIImage(data: imgData!) //in background
+            
+            DispatchQueue.main.async {
+                cell.imgV.image = img
+            }
+        }.resume()
+        
+        return cell
+    }
+}
+```
 
 ---
 # [MyCustomTables](https://github.com/zoharIOS/HackerU/tree/master/MyCustomTables)
