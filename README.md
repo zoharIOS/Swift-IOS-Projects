@@ -1701,7 +1701,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
 [picker and tableview examples including images in readme.md file](https://github.com/zoharIOS/HackerU/blob/master/Tbl_Pick1/README.md)
 ---
 
-# Screen ,  segue , activate a methode in another viewcontroller
+# Screen , activate a methode in another viewcontroller
 <img src="https://github.com/zoharIOS/HackerU/blob/master/Screens5/storyboard%20id.PNG" width = 200 />
 inodere to pass to another view controller using a button, and activate a function there:
 you must define a storyborad identifier: 
@@ -1740,8 +1740,32 @@ a viewcontroller kill / dismiss itself to return back to the previous viewcontro
     }
 }
 ```
-[Screens4](https://github.com/zoharIOS/HackerU/tree/master/Screens4) 
-severally viewcontrollers, each with buttons and only a specific route print "win" - open the project in xcode there is a problem and not all the documents properly present in github, in xcode it works fine.
+[Screens4](https://github.com/zoharIOS/HackerU/tree/master/ScreensEx2) 
+severally viewcontrollers, each with buttons and only a specific route print "win"
+[ScreensEx1](https://github.com/zoharIOS/HackerU/tree/master/ScreensEx1)
+simple login viewcontroller sucess login pass with storyboard_id to anoth viewcontroller
+
+---
+# seugu
+
+```swift
+  override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if identifier == "toPresentation" {
+            return input.hasText
+        }
+        
+        return false
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toPresentation" {
+            //pass data
+            let next = segue.destination as? ViewController
+            
+            next?.set(msg: input.text!)
+        }
+    }
+```
 
 ---
 
