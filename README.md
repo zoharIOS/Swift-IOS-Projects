@@ -1740,10 +1740,13 @@ a viewcontroller kill / dismiss itself to return back to the previous viewcontro
     }
 }
 ```
-[Screens4](https://github.com/zoharIOS/HackerU/tree/master/Screens4) severally viewcontrollers, each with buttons and only a specific route print "win" - open the project in xcode there is a problem and not all the documents properly present in github, in xcode it works fine.
+[Screens4](https://github.com/zoharIOS/HackerU/tree/master/Screens4) 
+severally viewcontrollers, each with buttons and only a specific route print "win" - open the project in xcode there is a problem and not all the documents properly present in github, in xcode it works fine.
+
 ---
 
 # Navigation controller
+<img src="https://github.com/zoharIOS/HackerU/blob/master/Screens5/storyboard.PNG" width = 200/>
 <img src="https://github.com/zoharIOS/HackerU/blob/master/Screens5/storyboard%20entry%20point.PNG" width = 200/> <img src="https://github.com/zoharIOS/HackerU/blob/master/Screens5/document%20outline.PNG" width = 200/>
 
 
