@@ -1699,4 +1699,56 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
 }
 ```
 [picker and tableview examples including images in readme.md file](https://github.com/zoharIOS/HackerU/blob/master/Tbl_Pick1/README.md)
+---
+
+# Screen ,  segue , activate a methode in another viewcontroller
+
+inodere to pass to another view controller using a button, and activate a function there:
+```swift
+@IBAction func toGreen(_ sender: Any) {
+        let green = storyboard!.instantiateViewController(withIdentifier: "green") as! GreenViewController
+        
+        //present(green, animated: true, completion: nil)
+        green.onRoute(routeFlag)
+        show(green, sender: self)
+    }
+```
+following is the viewcontroller we going to, in adition,
+a viewcontroller kill / dismiss itself to return back to the previous viewcontroller . shown on the stack
+```swift
+ class GreenViewController: UIViewController {
+
+    private var routeFlag = false
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
+        if routeFlag {
+            print("Won")
+        }
+    }
+
+    
+    @IBAction func kill(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    public func onRoute(_ flag:Bool){
+        self.routeFlag = flag
+    }
+}
+```
+[Screens4](https://github.com/zoharIOS/HackerU/tree/master/Screens4) severally viewcontrollers, each with buttons and only a specific route print "win" - open the project in xcode there is a problem and not all the documents properly present in github, in xcode it works fine.
+
+
+
+
+
+
+
+
+
+
+
 
