@@ -1702,8 +1702,9 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
 ---
 
 # Screen ,  segue , activate a methode in another viewcontroller
-
+<img src="https://github.com/zoharIOS/HackerU/blob/master/Screens5/storyboard%20id.PNG" width = 200 />
 inodere to pass to another view controller using a button, and activate a function there:
+you must define a storyborad identifier: 
 ```swift
 @IBAction func toGreen(_ sender: Any) {
         let green = storyboard!.instantiateViewController(withIdentifier: "green") as! GreenViewController
@@ -1740,9 +1741,49 @@ a viewcontroller kill / dismiss itself to return back to the previous viewcontro
 }
 ```
 [Screens4](https://github.com/zoharIOS/HackerU/tree/master/Screens4) severally viewcontrollers, each with buttons and only a specific route print "win" - open the project in xcode there is a problem and not all the documents properly present in github, in xcode it works fine.
+---
+
+# Navigation controller
+<img src="https://github.com/zoharIOS/HackerU/blob/master/Screens5/storyboard%20entry%20point.PNG" width = 200/> <img src="https://github.com/zoharIOS/HackerU/blob/master/Screens5/document%20outline.PNG" width = 200/>
 
 
-
+```swift
+    //works only in navigation controller
+    @IBAction func toBlue() {
+        navigationController!.popViewController(animated: true)
+    }
+    
+    @IBAction func toRoot() {
+        navigationController?.popToRootViewController(animated: true)
+    }
+```
+```swift
+ @IBAction func toMagenta(_ sender: UIButton) {
+        let next = storyboard!.instantiateViewController(withIdentifier: "magenta")
+        
+        //push next screen with navigation controller
+        //*
+        navigationController!.pushViewController(next, animated: true)
+        /*/
+        //present next screen without navigation controller
+        present(next, animated: true, completion: nil)
+        // */
+    }
+    
+    @IBAction func prev(_ sender: UIButton) {
+        //go back to previous screen
+        navigationController!.popViewController(animated: true)
+    }
+    
+```
+---
+# touchesBegan
+```swift
+    //only works when presenting outside of navigation controller
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        dismiss(animated: true, completion: nil)
+    }
+```
 
 
 
