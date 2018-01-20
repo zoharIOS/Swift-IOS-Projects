@@ -1746,7 +1746,7 @@ severally viewcontrollers, each with buttons and only a specific route print "wi
 ---
 
 # Navigation controller
-<img src="https://github.com/zoharIOS/HackerU/blob/master/Screens5/storyboard.PNG" width = 200/>
+<img src="https://github.com/zoharIOS/HackerU/blob/master/Screens5/storyboard.PNG" width = 600 style="display: inline;"/>
 <img src="https://github.com/zoharIOS/HackerU/blob/master/Screens5/storyboard%20entry%20point.PNG" width = 200/> <img src="https://github.com/zoharIOS/HackerU/blob/master/Screens5/document%20outline.PNG" width = 200/>
 
 
