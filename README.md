@@ -4,11 +4,12 @@
 ----------------------------------
 ---------------------------------------------------
 # [MySqlite](https://github.com/zoharIOS/HackerU/tree/master/MySqlite) FMDB
-1. create a folder FMDB  in the project and fill inside files from from [here](https://github.com/zoharIOS/HackerU/tree/master/MySqlite/fmdb) or download directly from [fmdb github](https://github.com/ccgus/fmdb) 
+1. source for the explanation: https://www.appcoda.com/fmdb-sqlite-database/ 
+create a folder FMDB  in the project and fill inside files from from [here](https://github.com/zoharIOS/HackerU/tree/master/MySqlite/fmdb) or download directly from [fmdb github](https://github.com/ccgus/fmdb) 
 Once you open the zip and decompress its contents, navigate to the **fmdb-master/src/fmdb** directory (in Finder). The files you’ll find there are those that you need to add to the starter project. Select them (there’s also a .plist file, you don’t really need it), and then drag and drop into the Project navigator in Xcode.
-After having added the files into the project, Xcode will ask you to create a **bridging header** file.
 <img src="https://www.appcoda.com/wp-content/uploads/2016/10/t56_4_drag_drop_files.png" width=700 />
-
+After having added the files into the project, Xcode will ask you to create a **bridging header** file.
+https://www.appcoda.com/wp-content/uploads/2016/10/t56_6_create_bridging_header.png
 ---
 # [Movies](https://github.com/zoharIOS/HackerU/tree/master/Movies)
 custom tabelview that presents an image and a label
