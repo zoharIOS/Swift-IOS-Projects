@@ -3,6 +3,52 @@
 # Summary sheet  <img src="https://vignette.wikia.nocookie.net/lapis/images/e/e5/Super_Mario_%21.png"  width="200" height="200" />
 ----------------------------------
 ---------------------------------------------------
+# Core Data
+modeling managed object and sotre in presistence in sqlite
+[tutorial](https://www.raywenderlich.com/173972/getting-started-with-core-data-tutorial-2)
+[MyCoreData](https://github.com/zoharIOS/Swift-IOS-Projects/tree/master/MyCoreData)
+1. start a project and enable "use code data"
+2. define a model in the file with the extention .xcdatamodeld (it's a gui to model the data)
+3. in viewcontroller.swift import CoreData and use the following example to use the model
+```swift
+import UIKit
+import CoreData
+
+class ViewController: UIViewController {
+
+    var context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+    override func viewDidLoad() {
+//        insertNewPerson(name: "Shoval", age: 21)
+//        insertNewPerson(name: "Bar", age: 22)
+//        insertNewPerson(name: "Guidon", age: 23)
+        query()
+        print("Done")
+        
+    }
+
+    func insertNewPerson(name: String, age: Int16) {
+        
+        let person = Person(context: context)// create new person and insert it to CoreData
+        //edit
+        person.name = name
+        person.age = age
+        
+        try! context.save()
+    }
+    
+    func query(){
+        let req: NSFetchRequest<Person> = Person.fetchRequest()
+        
+        let people = try! context.fetch(req)
+        for p in people {
+            print("\(p.name!), \(p.age)")
+        }
+    }
+}
+```
+
+---
 # [MySqlite](https://github.com/zoharIOS/HackerU/tree/master/MySqlite) FMDB
 1. source for the explanation: https://www.appcoda.com/fmdb-sqlite-database/ 
 create a folder FMDB  in the project and fill inside files from from [here](https://github.com/zoharIOS/HackerU/tree/master/MySqlite/fmdb) or download directly from [fmdb github](https://github.com/ccgus/fmdb) 
