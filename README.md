@@ -13,7 +13,7 @@
     <tr>
 <td><img src="https://github.com/zoharIOS/Swift-IOS-Projects/blob/master/MyMaps/Screen%20Shot%202018-01-27%20at%2010.21.43%20AM.png" width=200/>
 </td>
-        <td><img src="https://github.com/zoharIOS/Swift-IOS-Projects/blob/master/MyMaps/Screen%20Shot%202018-01-27%20at%2010.22.27%20AM.png" width=200/>
+        <td><img src="https://github.com/zoharIOS/Swift-IOS-Projects/blob/master/MyMaps/Screen%20Shot%202018-01-27%20at%2010.22.20%20AM.png" width=200/>
 </td>
         <td><img src="https://github.com/zoharIOS/Swift-IOS-Projects/blob/master/MyMaps/Screen%20Shot%202018-01-27%20at%2010.22.44%20AM.png" width=200/>
 </td>
