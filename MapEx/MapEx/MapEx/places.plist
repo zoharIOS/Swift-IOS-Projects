@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hackeru Haifa</key>
+	<array>
+		<real>32.792743</real>
+		<real>35.03687</real>
+	</array>
+	<key>Hackeru Center</key>
+	<array>
+		<real>32.084531</real>
+		<real>34.801083</real>
+	</array>
+    <key>Ben gurion airport</key>
+    <array>
+        <real>32</real>
+        <real>34.9</real>
+    </array>
+	<key>Lev Hamifratz</key>
+	<array>
+		<real>32.795368</real>
+		<real>35.036607</real>
+	</array>
+	<key>Hayarkon park west</key>
+	<array>
+		<real>32.097271</real>
+		<real>32.097271</real>
+	</array>
+	<key>Hayarkon park east</key>
+	<array>
+		<real>32.107655</real>
+		<real>34.847393</real>
+	</array>
+</dict>
+</plist>
