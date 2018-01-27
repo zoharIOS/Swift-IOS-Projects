@@ -3,6 +3,20 @@
 # Summary sheet  <img src="https://vignette.wikia.nocookie.net/lapis/images/e/e5/Super_Mario_%21.png"  width="200" height="200" />
 ----------------------------------
 ---------------------------------------------------
+# MAP 
+<table>
+    <tr>
+<td><img title="Standard" src="https://github.com/zoharIOS/Swift-IOS-Projects/blob/master/MyMaps/Screen%20Shot%202018-01-27%20at%2010.21.43%20AM.png" width=200/>
+</td>
+        <td><img title="Satelite" src="https://github.com/zoharIOS/Swift-IOS-Projects/blob/master/MyMaps/Screen%20Shot%202018-01-27%20at%2010.21.43%20AM.png" width=200/>
+</td>
+        <td><img title="Hybrid" src="https://github.com/zoharIOS/Swift-IOS-Projects/blob/master/MyMaps/Screen%20Shot%202018-01-27%20at%2010.21.43%20AM.png" width=200/>
+</td>
+    </tr>
+</table>
+
+
+---
 # Core Data
 modeling managed object and sotre in presistence in sqlite
 [tutorial](https://www.raywenderlich.com/173972/getting-started-with-core-data-tutorial-2)
