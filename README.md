@@ -20,6 +20,52 @@
     </tr>
 </table>
 
+Storyboard: drag into a ViewController , segmentedControl , mapView 
+inside viewcontroller.swift use **import MapKit**
+ViewController.swift
+```swift
+import UIKit
+import MapKit
+
+class ViewController: UIViewController, MKMapViewDelegate {
+
+    @IBOutlet var myMap: MKMapView!
+    var locaionManager: CLLocationManager!
+    
+    override func viewDidLoad() {
+        locaionManager = CLLocationManager() //initialize location manager
+        locaionManager.requestAlwaysAuthorization()// prompt user current location
+        myMap.delegate = self //assign instance self as delegate property
+        
+        //show user's current location
+        myMap.showsUserLocation = true
+        //map layer type
+        myMap.mapType = .standard
+        
+        //add markers
+        addMarker()
+    }
+
+    //when user's location changed (walking, driving, etc..)
+    func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
+        //reset region to each location changed
+        let newPlace = userLocation.coordinate
+        myMap.setRegion(MKCoordinateRegionMakeWithDistance(newPlace, 8000, 8000), animated: true)
+    }
+    
+    @IBAction func changeType(_ seg: UISegmentedControl) {
+        let i = seg.selectedSegmentIndex
+        myMap.mapType = MKMapType(rawValue: UInt(i))!
+    }
+    
+    func addMarker() {
+        let pin = MKPointAnnotation()
+        pin.title = "My Pin"
+        pin.coordinate = CLLocationCoordinate2D(latitude: 32.0, longitude: 34.9)
+        myMap.addAnnotation(pin) //add to map
+    }
+}
+```
 
 ---
 # Core Data
@@ -28,7 +74,7 @@ modeling managed object and sotre in presistence in sqlite
 [MyCoreData](https://github.com/zoharIOS/Swift-IOS-Projects/tree/master/MyCoreData)
 1. start a project and enable "use code data"
 2. define a model in the file with the extention .xcdatamodeld (it's a gui to model the data)
-3. in viewcontroller.swift import CoreData and use the following example to use the model
+3. in viewcontroller.swift **import CoreData** and use the following example to use the model
 ```swift
 import UIKit
 import CoreData
