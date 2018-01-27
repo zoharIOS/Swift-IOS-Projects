@@ -6,11 +6,16 @@
 # MAP 
 <table>
     <tr>
-<td><img title="Standard" src="https://github.com/zoharIOS/Swift-IOS-Projects/blob/master/MyMaps/Screen%20Shot%202018-01-27%20at%2010.21.43%20AM.png" width=200/>
+        <td>Standard</td>
+         <td>Satelite</td>
+         <td>Hybrid</td>
+    </tr>
+    <tr>
+<td><img src="https://github.com/zoharIOS/Swift-IOS-Projects/blob/master/MyMaps/Screen%20Shot%202018-01-27%20at%2010.21.43%20AM.png" width=200/>
 </td>
-        <td><img title="Satelite" src="https://github.com/zoharIOS/Swift-IOS-Projects/blob/master/MyMaps/Screen%20Shot%202018-01-27%20at%2010.21.43%20AM.png" width=200/>
+        <td><img src="https://github.com/zoharIOS/Swift-IOS-Projects/blob/master/MyMaps/Screen%20Shot%202018-01-27%20at%2010.22.27%20AM.png" width=200/>
 </td>
-        <td><img title="Hybrid" src="https://github.com/zoharIOS/Swift-IOS-Projects/blob/master/MyMaps/Screen%20Shot%202018-01-27%20at%2010.21.43%20AM.png" width=200/>
+        <td><img src="https://github.com/zoharIOS/Swift-IOS-Projects/blob/master/MyMaps/Screen%20Shot%202018-01-27%20at%2010.22.44%20AM.png" width=200/>
 </td>
     </tr>
 </table>
