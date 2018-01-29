@@ -34,13 +34,15 @@
         <td><img src="https://github.com/zoharIOS/Swift-IOS-Projects/blob/master/MapEx/MapEx/Screen%20Shot%202018-01-29%20at%208.37.57.png" width=700/></td>
     </tr>
             <td>permission is handeled by the line:</td>
-        <td>```
+        <td>
+```
 locaionManager.requestAlwaysAuthorization() // prompt user current location for Allwayd
 ```
 or
 ```
 locaionManager.requestWhenInUseAuthorization() // prompt user current location For just when the app in use
-```</td>
+```
+    </td>
     </tr>
 </table>
  
