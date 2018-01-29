@@ -20,20 +20,31 @@
 </td>
     </tr>
 </table>
-
-1. Storyboard: drag into a ViewController , segmentedControl , mapView 
-2. Asign mapView to the viewController <span><img src="https://github.com/zoharIOS/Swift-IOS-Projects/blob/master/MapEx/MapEx/mapkit%20to%20deligate.png" width=300/></span><br>
-add MapKit library <span><img src="https://github.com/zoharIOS/Swift-IOS-Projects/blob/master/MapEx/MapEx/Screen%20Shot%202018-01-29%20at%208.37.57.png" width=700/></span>
-
-permission is handeled by the line:
-
-```
+<table>
+    <tr>
+        <td>1. Storyboard: drag into a ViewController , segmentedControl , mapView</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>2. Asign mapView to the viewController</td>
+        <td><img src="https://github.com/zoharIOS/Swift-IOS-Projects/blob/master/MapEx/MapEx/mapkit%20to%20deligate.png" width=300/></td>
+    </tr>
+    <tr>
+        <td>add MapKit library</td>
+        <td><img src="https://github.com/zoharIOS/Swift-IOS-Projects/blob/master/MapEx/MapEx/Screen%20Shot%202018-01-29%20at%208.37.57.png" width=700/></td>
+    </tr>
+            <td>permission is handeled by the line:</td>
+        <td>```
 locaionManager.requestAlwaysAuthorization() // prompt user current location for Allwayd
 ```
 or
 ```
 locaionManager.requestWhenInUseAuthorization() // prompt user current location For just when the app in use
-```
+```</td>
+    </tr>
+</table>
+ 
+
 ViewController.swift
 ```swift
 import UIKit
