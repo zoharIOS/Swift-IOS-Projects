@@ -22,7 +22,8 @@
 </table>
 
 Storyboard: drag into a ViewController , segmentedControl , mapView 
-inside viewcontroller.swift use **import MapKit**
+add MapKit library
+<img src="https://github.com/zoharIOS/Swift-IOS-Projects/blob/master/MapEx/MapEx/Screen%20Shot%202018-01-29%20at%208.37.57.png" width=700/>
 ViewController.swift
 ```swift
 import UIKit
