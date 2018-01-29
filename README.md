@@ -22,7 +22,7 @@
 </table>
 
 1. Storyboard: drag into a ViewController , segmentedControl , mapView 
-2. Asign mapView to the viewController <span><img src="https://github.com/zoharIOS/Swift-IOS-Projects/blob/master/MapEx/MapEx/mapkit%20to%20deligate.png" width=300/></span>
+2. Asign mapView to the viewController <span><img src="https://github.com/zoharIOS/Swift-IOS-Projects/blob/master/MapEx/MapEx/mapkit%20to%20deligate.png" width=300/></span><br>
 add MapKit library <span><img src="https://github.com/zoharIOS/Swift-IOS-Projects/blob/master/MapEx/MapEx/Screen%20Shot%202018-01-29%20at%208.37.57.png" width=700/></span>
 
 permission is handeled by the line:
