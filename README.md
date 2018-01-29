@@ -211,7 +211,7 @@ enable networking in info.plist: (in the correct file and not under tests!)<img 
     </dict>
 ```
 in storyboard define tableview , tabelviewcell, inside of the cell define an image, label and textview
-asign the cell with the following class:
+asign the cell with the following class: (first asign the custom class to the TableCellView in the storyboard inspector)
 
 MovieTableCell.swift
 ```swift
