@@ -123,14 +123,18 @@ class ViewController: UIViewController {
 
 ---
 # [MySqlite](https://github.com/zoharIOS/HackerU/tree/master/MySqlite) FMDB
-1. source for the explanation: https://www.appcoda.com/fmdb-sqlite-database/ 
-create a folder FMDB  in the project and fill inside files from from [here](https://github.com/zoharIOS/HackerU/tree/master/MySqlite/fmdb) or download directly from [fmdb github](https://github.com/ccgus/fmdb) 
+1. create a folder FMDB  in the project and fill inside files from from [here](https://github.com/zoharIOS/HackerU/tree/master/MySqlite/fmdb) or download directly from [fmdb github](https://github.com/ccgus/fmdb) 
 Once you open the zip and decompress its contents, navigate to the **fmdb-master/src/fmdb** directory (in Finder). The files you’ll find there are those that you need to add to the starter project. Select them (there’s also a .plist file, you don’t really need it), and then drag and drop into the Project navigator in Xcode.
 <img src="https://www.appcoda.com/wp-content/uploads/2016/10/t56_4_drag_drop_files.png" width=700 />
-After having added the files into the project, Xcode will ask you to create a **bridging header** file.
-<img src="https://www.appcoda.com/wp-content/uploads/2016/10/t56_6_create_bridging_header.png" width=700 />
-Accept that if you want to avoid making it manually on your own. One more file will be added to the project, 
-called **FMDBTut-Bridging-Header.h.** Open it and write the following line:
+After having added the files into the project, after adding the files you should mark the files as belong to the project and not been jest as reference only (the popup window appear after adding the files to the project)
+<img src="https://github.com/zoharIOS/Swift-IOS-Projects/blob/master/MySqlite/Screen%20Shot%202018-01-29%20at%208.30.01.png" width=400/>
+now you have to add  a **bridging header** file. 
+inorder to do this, go to the top tree of the project , select it and go to build settings
+<img src="https://github.com/zoharIOS/Swift-IOS-Projects/blob/master/MySqlite/build%20settings.png" width=500/>
+add there, under the objective-c brifge header, the path to FMDB.h file. in the example image the name of the project is Myplist, then the folder is FMDB and the then the file FMDB.h
+then you should run build with window key + B or:
+<img src="https://github.com/zoharIOS/Swift-IOS-Projects/blob/master/MySqlite/run%20bui8ld.png" width=400/>
+
 ```
 #import "FMDB.h"
 1
