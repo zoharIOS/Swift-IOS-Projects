@@ -146,8 +146,10 @@ Once you open the zip and decompress its contents, navigate to the **fmdb-master
 <img src="https://www.appcoda.com/wp-content/uploads/2016/10/t56_4_drag_drop_files.png" width=700 />
 After having added the files into the project, after adding the files you should mark the files as belong to the project and not been jest as reference only (the popup window appear after adding the files to the project)
 <img src="https://github.com/zoharIOS/Swift-IOS-Projects/blob/master/MySqlite/Screen%20Shot%202018-01-29%20at%208.30.01.png" width=400/>
+
 now you have to add  a **bridging header** file. 
 inorder to do this, go to the top tree of the project , select it and go to build settings and search for **bridg** to find it quiqly
+
 <img src="https://github.com/zoharIOS/Swift-IOS-Projects/blob/master/MySqlite/build%20settings.png" width=500/>
 add there, under the objective-c brifge header, the path to FMDB.h file. in the example image the name of the project is Myplist, then the folder is FMDB and the then the file FMDB.h
 then you should run build with window key + B or:
