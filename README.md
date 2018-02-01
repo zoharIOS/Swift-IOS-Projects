@@ -2047,7 +2047,11 @@ navbar
         dismiss(animated: true, completion: nil)
     }
 ```
+---
 
+How to set Image corectly:
+1. set imageView width and height as you need and asign "aspect fit" in attribute inspector (story board on imageview)
+<img src="https://github.com/zoharIOS/Swift-IOS-Projects/blob/master/Aspect%20fit.png" width=500/>
 
 
 
