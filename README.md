@@ -34,7 +34,9 @@
         <td><img src="https://github.com/zoharIOS/Swift-IOS-Projects/blob/master/MapEx/MapEx/Screen%20Shot%202018-01-29%20at%208.37.57.png" width=700/></td>
 </tr>
 </table>
- 
+
+notes:
+
 permission is handeled by the line:
 ```
 locaionManager.requestAlwaysAuthorization() // prompt user current location for Allwayd
@@ -43,6 +45,8 @@ or
 ```
 locaionManager.requestWhenInUseAuthorization() // prompt user current location For just when the app in use
 ```
+
+import MapKit and add the implementation of MKMapViewDelegate to the view controller as following :
 
 ViewController.swift
 ```swift
