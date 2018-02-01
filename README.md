@@ -248,6 +248,18 @@ first asign the custom class to the TableCellView in the storyboard inspector.
 inorder to corectly choose the TabelCellView and aign the custome class choose it from the left storyboard tree as foolowing image shows:
 <img src="https://github.com/zoharIOS/Swift-IOS-Projects/blob/master/Movies/tabelCell.png" width=400/>
 
+Assign Identifier for the tabelCell in Attributes inspector:
+<table>
+    <tr>
+        <td>Assign the identifier</td>
+        <td>Affter Assigning the identifier</td>
+    </tr>
+    <tr>
+        <td><img src="https://github.com/zoharIOS/Swift-IOS-Projects/blob/master/Movies/Assign%20Identifier%20for%20reuse%20cell.png" width=200/></td>
+        <td><imgsrc="https://github.com/zoharIOS/Swift-IOS-Projects/blob/master/Movies/after%20assigning%20the%20reuse%20identifier.png" width=200/></td>
+    </tr>
+    </table>
+
 MovieTableCell.swift
 ```swift
 class MovieTableCell: UITableViewCell {
