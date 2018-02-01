@@ -249,16 +249,10 @@ inorder to corectly choose the TabelCellView and aign the custome class choose i
 <img src="https://github.com/zoharIOS/Swift-IOS-Projects/blob/master/Movies/tabelCell.png" width=400/>
 
 Assign Identifier for the tabelCell in Attributes inspector:
-<table>
-    <tr>
-        <td>Assign the identifier</td>
-        <td>Affter Assigning the identifier</td>
-    </tr>
-    <tr>
-        <td><img src="https://github.com/zoharIOS/Swift-IOS-Projects/blob/master/Movies/Assign%20Identifier%20for%20reuse%20cell.png" width=300/></td>
-        <td><imgsrc="https://github.com/zoharIOS/Swift-IOS-Projects/blob/master/Movies/after%20assigning%20the%20reuse%20identifier.png" width=300/></td>
-    </tr>
-    </table>
+Assign the identifier:
+img src="https://github.com/zoharIOS/Swift-IOS-Projects/blob/master/Movies/Assign%20Identifier%20for%20reuse%20cell.png" width=300/>
+Affter Assigning the identifier:
+<imgsrc="https://github.com/zoharIOS/Swift-IOS-Projects/blob/master/Movies/after%20assigning%20the%20reuse%20identifier.png" width=300/>
 
 MovieTableCell.swift
 ```swift
