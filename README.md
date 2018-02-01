@@ -250,9 +250,9 @@ inorder to corectly choose the TabelCellView and aign the custome class choose i
 
 Assign Identifier for the tabelCell in Attributes inspector:
 Assign the identifier:
-img src="https://github.com/zoharIOS/Swift-IOS-Projects/blob/master/Movies/Assign%20Identifier%20for%20reuse%20cell.png" width=300/>
+<img src="https://github.com/zoharIOS/Swift-IOS-Projects/blob/master/Movies/Assign%20Identifier%20for%20reuse%20cell.png" width=300/>
 Affter Assigning the identifier:
-<imgsrc="https://github.com/zoharIOS/Swift-IOS-Projects/blob/master/Movies/after%20assigning%20the%20reuse%20identifier.png" width=300/>
+<img src="https://github.com/zoharIOS/Swift-IOS-Projects/blob/master/Movies/after%20assigning%20the%20reuse%20identifier.png" width=300/>
 
 MovieTableCell.swift
 ```swift
